@@ -16,7 +16,7 @@ app.use("/users", userRouter); // localhost:5050/users/signup
 app.use("/item", itemRouter);
 
 const MONGODB_URL =
-  "mongodb+srv://boyjarv:AlbertJe55!@cluster0.huopdeu.mongodb.net/lookwif?retryWrites=true&w=majority";
+  "mongodb+srv://xxx:xxx@cluster0.huopdeu.mongodb.net/lookwif?retryWrites=true&w=majority";
 
 const port = 5050;
 
