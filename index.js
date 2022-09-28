@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to LookWhatIFound");
 });
 
-const port = process.env.PORT || 5050;
+const port = process.env.PORT || 5000;
 
 mongoose
   .connect(process.env.MONGODB_URL)
