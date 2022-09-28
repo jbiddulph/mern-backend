@@ -129,16 +129,13 @@ export const getRelatedItems = async (req, res) => {
 
 export const likeItem = async (req, res) => {
   const { id } = req.params;
-
   try {
     if (!req.userId) {
       return res.json({ message: "User is not authenticated" });
     }
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      return res
-        .status(404)
-        .json({ message: `No item exists with the id: ${id}` });
+      return res.status(404).json({ message: `No item exist with id: ${id}` });
     }
 
     const item = await ItemModel.findById(id);
@@ -155,7 +152,7 @@ export const likeItem = async (req, res) => {
       new: true,
     });
 
-    res.status(200).json(updateItem);
+    res.status(200).json(updatedItem);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
