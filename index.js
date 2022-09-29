@@ -16,7 +16,7 @@ app.use(cors());
 app.use("/users", userRouter); // localhost:5050/users/signup
 app.use("/item", itemRouter);
 app.get("/", (req, res) => {
-  res.send("Welcome to LookWhatIFound");
+  res.send("Welcome to LookWhatIFound API");
 });
 
 const port = process.env.PORT || 5000;
