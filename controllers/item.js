@@ -74,7 +74,7 @@ export const deleteItem = async (req, res) => {
 
 export const updateItem = async (req, res) => {
   const { id } = req.params;
-  const { title, description, creator, imageFile, tags } = req.body;
+  const { title, description, category, creator, imageFile, tags } = req.body;
   try {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res
@@ -85,6 +85,7 @@ export const updateItem = async (req, res) => {
       creator,
       title,
       description,
+      category,
       tags,
       imageFile,
       _id: id,

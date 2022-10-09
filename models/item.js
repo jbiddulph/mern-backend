@@ -6,6 +6,7 @@ const itemSchema = mongoose.Schema({
   name: String,
   status: String,
   creator: String,
+  category: String,
   tags: [String],
   imageFile: String,
   //   location: {
